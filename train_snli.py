@@ -344,22 +344,22 @@ if __name__ == '__main__':
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('--train_file', help='training data file (hdf5)',
-                        type=str, default='/disk/scratch/bowenli/nmt/struct-attn/data/snli/baseline/entail-train.hdf5')
+                        type=str, default='YOUR_DATA_PATH/entail-train.hdf5')
 
     parser.add_argument('--dev_file', help='development data file (hdf5)',
-                        type=str, default='/disk/scratch/bowenli/nmt/struct-attn/data/snli/baseline/entail-val.hdf5')
+                        type=str, default='YOUR_DATA_PATH/entail-val.hdf5')
 
     parser.add_argument('--test_file', help='test data file (hdf5)',
-                        type=str, default='/disk/scratch/bowenli/nmt/struct-attn/data/snli/baseline/entail-test.hdf5')
+                        type=str, default='YOUR_DATA_PATH/entail-test.hdf5')
 
     parser.add_argument('--w2v_file', help='pretrained word vectors file (hdf5)',
-                        type=str, default='/disk/scratch/bowenli/nmt/struct-attn/data/snli/baseline/glove.hdf5')
+                        type=str, default='YOUR_DATA_PATH/glove.hdf5')
 
     parser.add_argument('--log_dir', help='log file directory',
-                        type=str, default='/disk/scratch/bowenli/nmt/struct-attn/data/snli/experiment/')
+                        type=str, default='YOUR_LOG_DIR/')
 
     parser.add_argument('--log_fname', help='log file name',
-                        type=str, default='log43.log')
+                        type=str, default='YOUR_LOG_NAME')
 
     parser.add_argument('--gpu_id', help='GPU device id',
                         type=int, default=0)
@@ -406,7 +406,7 @@ if __name__ == '__main__':
                         type=float, default=1e-5)
 
     parser.add_argument('--model_path', help='path of model file (not include the name suffix',
-                        type=str, default='/disk/scratch/bowenli/nmt/struct-attn/data/snli/experiment/')
+                        type=str, default='YOUR_MODEL_PATH')
 
     args=parser.parse_args()
     # args.max_lenght = 10   # args can be set manually like this
