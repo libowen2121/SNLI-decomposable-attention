@@ -155,8 +155,8 @@ def train(args):
                         grad_norm += m.bias.grad.data.norm() ** 2
                         para_norm += m.bias.data.norm() ** 2
 
-            grad_norm ** 0.5
-            para_norm ** 0.5
+#             grad_norm ** 0.5
+#             para_norm ** 0.5
 
             shrinkage = args.max_grad_norm / grad_norm
             if shrinkage < 1 :
